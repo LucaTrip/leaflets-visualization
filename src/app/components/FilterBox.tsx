@@ -18,7 +18,6 @@ type Props = {
 };
 
 const FilterBox: React.FC<Props> = ({ id, name, values, onClick }) => {
-  console.log("FILTER BOX", name);
   const [inputNameValue, setInputNameValue] = useState("");
 
   const context = useContext(GlobalContext);

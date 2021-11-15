@@ -15,7 +15,6 @@ const Home = () => {
   const context = useContext(GlobalContext);
 
   useEffect(() => {
-    console.log("CONTEXT BEFORE CALLED API", context);
     setIsLoading(true);
     axios
       .get<LeafletResponse>(
@@ -32,7 +31,6 @@ const Home = () => {
         }
       )
       .then(({ data }) => {
-        console.log("response", data);
         if (!data.error) {
           setLeaflets(data.data.leaflets);
         } else {
@@ -40,7 +38,6 @@ const Home = () => {
         }
       })
       .catch((error) => {
-        console.log("response error", error);
         setNoLeafletToShow(true);
       })
       .finally(() => {

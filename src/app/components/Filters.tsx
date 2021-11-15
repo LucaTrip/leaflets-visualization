@@ -35,7 +35,6 @@ const filters = [
 ];
 
 const Filters = () => {
-  console.log("FILTERS");
   const [availableFilters, setFilters] = useState(filters);
 
   const handleOnButtonPress = (filterId: string, filterValueId: string) => {
